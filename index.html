@@ -1,32 +1,169 @@
 <!doctype html>
 <html>
 <head>
+<meta charset="utf-8">
+<title>Agent_oo8</title>
 
 <style>
-
-body{ margin: 0px; background:#000;
-background:url(https://github.com/ktathehack/ktathehack.github.io/blob/master/myPat.png?raw=true) repeat;
-	animation: animate-background linear 10s infinite;
+/* basic menu styles */
+.block-menu {
+	display: block;
+	
 }
 
+.block-menu li {
+	display: inline-block;
+}
+
+.block-menu li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-family: 'Passion One', Arial, sans-serif;
+	font-smoothing: antialiased;
+	text-transform: uppercase;
+	overflow: visible;
+	line-height: 20px;
+	font-size: 24px;
+	padding: 15px 10px;
+}
+
+/* animation domination */
+.three-d {
+	perspective: 200px;
+	transition: all .07s linear;
+	position: relative;
+	cursor: pointer;
+}
+	/* complete the animation! */
+	.three-d:hover .three-d-box, 
+	.three-d:focus .three-d-box {
+		transform: translateZ(-25px) rotateX(90deg);
+	}
+
+.three-d-box {
+	transition: all .3s ease-out;
+	transform: translatez(-25px);
+	transform-style: preserve-3d;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 
+	put the "front" and "back" elements into place with CSS transforms, 
+	specifically translation and translatez
+*/
+.front {
+	transform: rotatex(0deg) translatez(25px);
+	background: black;
+	color: #999;
+}
+
+.back {
+	transform: rotatex(-90deg) translatez(25px);
+	background: #29D300;
+	color: #FFF;
+}
+
+.front, .back {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	padding: 15px 10px;
+	
+	pointer-events: none;
+	box-sizing: border-box;
+}
+</style>
+<style>
+.hi {font-size:24px;
+color:white;
+	}
+	
+	
+body{ margin: 18px;
+background-image:url(https://raw.githubusercontent.com/ktathehack/ktathehack.github.io/master/final.jpg);
+
+
+	animation: animate-background linear 30s infinite;
+}
 	
 @keyframes animate-background
 {
 	from{background-position: 0px;}
-	to{background-position: 1000px;}
+	to{background-position: 1920px;}
 	}
-
-p {
-    font-family: "Times New Roman", Times, serif;
-	color: #FF2B2F;
-	font-size: 40px;
-}
-
 </style>
-
 </head>
 
 <body>
-
+<ul class="block-menu">
+	<li><a href="/" class="three-d">
+		Home
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Home</span>
+			<span class="back">Home</span>
+		</span>
+	</a></li>
+   		<li><a href="/demos" class="three-d">
+		Photos
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Photos</span>
+			<span class="back">Photos</span>
+		</span>
+	</a></li>
+        	<li><a href="/demos" class="three-d">
+		Videos
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Videos</span>
+			<span class="back">Videos</span>
+		</span>
+	</a></li>
+    	<li><a href="/demos" class="three-d">
+		Matches
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Matches</span>
+			<span class="back">Matches</span>
+		</span>
+	</a></li>
+    <li><a href="/demos" class="three-d">
+		Social
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Social</span>
+			<span class="back">Social</span>
+		</span>
+	</a></li>
+    <li><a href="/demos" class="three-d">
+		Stuff
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Stuff</span>
+			<span class="back">Stuff</span>
+		</span>
+	</a></li>
+</ul>
+<p class="hi">Welcome to my website. </p>
+<p class="hi">My nickname in Tanki is: Agent_oo8</p>
+<p class="hi">Here you may find Tanki videos/photos/resources</p>
+<iframe width="642" height="360" src="https://www.youtube.com/embed/kJVWHWF6UvM" frameborder="0" allowfullscreen></iframe>
+<br></br>
+<iframe width="642" height="360" src="https://www.youtube.com/embed/u5btPoNIfjM" frameborder="0" allowfullscreen></iframe>
+<br></br>
+<iframe width="642" height="360" src="https://www.youtube.com/embed/lbQvYTGrFlg" frameborder="0" allowfullscreen></iframe>
+<br></br>
+<iframe width="642" height="360" src="https://www.youtube.com/embed/kH8rKv6BaDc" frameborder="0" allowfullscreen></iframe>
+<br/>
 </body>
 </html>
+
+
+
+
